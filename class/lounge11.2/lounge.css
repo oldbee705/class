@@ -49,14 +49,36 @@
   font-weight: bold;
 }
 
-a:link{
-  color: green;
+.j{
+  font-size: 50%;
+  text-align: center;
+  line-height: normal;
+  margin-top: 30px;
 }
 
-a:visited{
-  color:red;
+.elixirs a:link{
+  color: red;
 }
 
-a:hover{
-  color:gold;
+.elixirs a:visited{
+  color: yellowgreen;
 }
+
+.elixirs a:hover{
+  background: purple;
+  color: yellow;
+}
+
+.d a:link{
+  color: red;
+}
+
+.d a:visited{
+  color: yellowgreen;
+}
+
+.d a:hover{
+  background: purple;
+  color: yellow;
+}
+

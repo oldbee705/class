@@ -11,11 +11,27 @@ body {
   height:           108px;
 }
 
+#award{
+  position: absolute;
+  top: 30px;
+  left: 46%;
+}
+
 #drinks{
   float:left;
   background-color: #efe5d0;
-  padding: 20px;
+  padding: 20px 20px 200px 20px;
   vertical-align: top;
+}
+
+#coupon{
+  position: fixed;
+  top:350px;
+  left:-90px;
+}
+
+#coupon a, img{
+  border: none;
 }
 
 
@@ -43,7 +59,7 @@ body {
   padding:          15px;
   top: 128px;
   right: 0px;
-  width: 280px;
+  width: 180px;
   vertical-align: top;
 }
 

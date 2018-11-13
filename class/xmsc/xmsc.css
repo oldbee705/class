@@ -1,0 +1,39 @@
+.body{
+  margin:0px;
+}
+
+.top {
+  background-color: #333333;
+  color: #b0b0b0;
+  line-height: 40px;
+  width:auto;
+  font-size: 12px;
+  font-family: sans-serif;
+  height: 40px;
+}
+
+.top-left{
+  padding-left:10px;
+  float: left;
+}
+
+.top-right{
+  float:right;
+  margin-right:20px;
+
+}
+
+.top-gwc {
+  background: #505050;
+  float:right;
+  height:auto;
+  width:auto;
+  margin-left:-4px;
+  display: block;
+  text-align: center;
+  padding:0px 20px;
+}
+
+.sep{
+  padding:3px;
+}

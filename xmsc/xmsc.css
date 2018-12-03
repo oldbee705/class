@@ -1,0 +1,164 @@
+body{
+  margin-top:0px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.top-zc {
+  background-color: #333333;
+  color: #b0b0b0;
+  line-height: 40px;
+  font-size: 12px;
+  font-family: sans-serif;
+  height: 40px;
+  width:auto;
+}
+
+.top-nr-40 {
+  width:1226px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.top-left-40 {
+  float: left;
+}
+.top-nr-40 a{
+  text-decoration: none;
+  color:#b0b0b0;
+}
+
+.top-nr-40 a:hover{
+  color:#fff
+}
+
+.top-right-40 {
+  float:right;
+  margin-right:20px;
+}
+
+.gwc-tb-40{
+  margin: 10px 7px 0px 0px;
+  height: 20px;
+  width: 20px;
+  float: left;
+}
+
+.top-gwc-40 {
+  background: #505050;
+  float:right;
+  height:auto;
+  width:auto;
+  margin-left:-4px;
+  display: block;
+  text-align: center;
+  padding:0px 20px;
+}
+
+.sep{
+  margin:3px;
+  opacity: 0.3;
+}
+
+.body-zhangcheng{
+  position: relative;
+  height: 100px;
+  width: 1226px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-nr-40{
+  width: 1226px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header-logo-40{
+  float: left;
+  width: 62px;
+  margin-top: 22px;
+}
+
+.header-logo-tb-40{
+  position: relative;
+  display: block;
+  width: 55px;
+  height: 55px;
+}
+
+.header-nav-40{
+  float: left;
+  width: 850px;
+}
+
+.list-header-zc{
+  position: relative;
+  float: left;
+  width: 820px;
+  height: 57px;
+  margin-top: 15px;
+  padding: 12px 0px 0px 180px;
+  list-style-type: none;
+}
+
+.nav-item-zc{
+  float: left;
+  margin: 13px;
+}
+
+.header-nav-40 a{
+  color:#333;
+  text-decoration: none;
+}
+
+.header-nav-40 a:hover{
+  color:#ff6700;
+}
+
+.site-category{
+  position: absolute;
+  margin-top: 100px;
+  width: 234px;
+  height: 455px;
+  font-size: 15px;
+  background: #333;
+}
+
+.site-category-40{
+  list-style-type: none;
+  padding-left: 0px;
+  height: 42px;
+  line-height: 42px;
+}
+
+.category-item-bee{
+  padding-left: 30px;
+}
+
+.category-item-bee-jt{
+  float: right;
+  padding-right: 25px;
+}
+
+.site-category-40 a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.site-category-40 a:hover{
+  background: #ff6700
+}
+
+.site-category{
+  clear: right;
+}
+
+.header-xm-zc{
+  float: right;
+}
+
+.xmmix3{
+  height: 455px;
+  width: 1000px;
+}

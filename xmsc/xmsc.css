@@ -12,6 +12,7 @@ body{
   font-family: sans-serif;
   height: 40px;
   width:auto;
+  display: 
 }
 
 .top-nr-40 {
@@ -50,7 +51,6 @@ body{
   height:auto;
   width:auto;
   margin-left:-4px;
-  display: block;
   text-align: center;
   padding:0px 20px;
 }
@@ -82,7 +82,6 @@ body{
 
 .header-logo-tb-40{
   position: relative;
-  display: block;
   width: 55px;
   height: 55px;
 }
@@ -151,7 +150,7 @@ body{
 }
 
 .site-category{
-  clear: right;
+  opacity: 0.9;
 }
 
 .header-xm-zc{
@@ -161,4 +160,49 @@ body{
 .xmmix3{
   height: 455px;
   width: 1000px;
+}
+
+.category-item-bee-jt{
+  color: #fff;
+}
+
+.span4{
+  float: left;
+  margin-top: 14px;
+}
+
+.xm8{
+  float: left;
+  margin-left: 15px;
+  margin-top: 14px;
+}
+
+.hm6{
+  float: left;
+  margin-left: 15px;
+  margin-top: 14px;
+}
+
+.xmsh3{
+  float: left;
+  margin-left: 16px;
+  margin-top: 14px;
+}
+
+.home-appliances-40{
+  width: 1226px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+}
+
+.jd-top-40{
+  font-size: 22px;
+  line-height: 58px;
+  color: #333;
+  float: left;
+}
+
+.jd-z{
+  
 }

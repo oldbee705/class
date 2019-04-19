@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible">
+  <title>aaa</title>
+</head>
+<body>
+  <script>
+    function makePhrases(){
+      var names = ['潘铖','朱明杨','俞浩','陈李鹏']
+      var time = ['早上','中午','下午','晚上']
+      var site = ['宿舍','食堂','教室','机房']
+      var act = ['睡觉','上课','玩游戏','吃饭']
+      var phrase = chose(names) + chose(time) + '在' + chose(site) + chose(act);
+      document.write(phrase)
+
+      function chose(array){
+        return array[Math.floor(Math.random() * array.length)]
+      }
+    }
+    makePhrases();
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+  function aim(){
+    path = 'zjsc/aim.jpg'
+    document.getElementById(this.id).innerHTML='<img src="'+path+'" />'
+  }
+  function aimout(){
+    document.getElementById(this.id).innerHTML=''
+  }    firez[i].onmousemove = aim
+    firez[i].onmouseout = aimout

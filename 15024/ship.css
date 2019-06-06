@@ -1,0 +1,148 @@
+body{
+  background-color: black;
+}
+
+div#board{
+  position: relative;
+  width: 1024px;
+  height: 863px;
+  margin: auto;
+  background: url('board.jpg') no-repeat;
+  /* background-image: url('board.jpg') */
+}
+
+div#messageArea{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: rgb(83, 175, 19); 
+}
+
+table {
+  position: absolute;
+  left: 173px;
+  top: 98px;
+  border-spacing: 0px; 
+}
+
+td {
+  width: 94px;
+  height: 94px;
+}
+
+form {
+  position: absolute;
+  display: none;
+  bottom: 0px;
+  right: 0px;
+  padding: 15px;
+  background-color: rgb(83, 175, 19);
+}
+
+form input {
+  background-color: rgb(152, 207, 113);
+  border-color: rgb(83, 175, 19);
+  font-size: 1em;
+}
+
+.ship {
+  background: url("ship.png") no-repeat center center;
+}
+
+.miss {
+  background: url("miss.png") no-repeat center center;
+}
+
+.boom {
+  width: 94px;
+  height: 94px;
+  background: url("boom.png") no-repeat center center;
+}
+
+.aircraft0 {
+  width: 94px;
+  height: 94px;
+  background: url("aircraft.png") no-repeat;
+}
+
+
+.submarine0 {
+  width: 94px;
+  height: 94px;
+  background: url("submarine.png") no-repeat;
+}
+
+.submarine1 {
+  width: 94px;
+  height: 94px;
+  background: url("submarine.png") no-repeat;
+  background-position: left 0px top -94px;
+}
+
+.battleShip0 {
+  width: 94px;
+  height: 94px;
+  background: url("battleShip.png") no-repeat;
+}
+
+.battleShip1 {
+  width: 94px;
+  height: 94px;
+  background: url("battleShip.png") no-repeat;
+  background-position: left 0px top -94px;
+}
+
+.battleShip2 {
+  width: 94px;
+  height: 94px;
+  background: url("battleShip.png") no-repeat;
+  background-position: left 0px top -188px;
+}
+.carrier0 {
+  width: 94px;
+  height: 94px;
+  background: url("carrier.png") no-repeat;
+}
+
+.carrier1 {
+  width: 94px;
+  height: 94px;
+  background: url("carrier.png") no-repeat;
+  background-position: left -94px top 0px;
+}
+
+.carrier2 {
+  width: 94px;
+  height: 94px;
+  background: url("carrier.png") no-repeat;
+  background-position: left 0px top -94px;
+}
+
+.carrier3 {
+  width: 94px;
+  height: 94px;
+  background: url("carrier.png") no-repeat;
+  background-position: left -94px top -94px;
+}
+
+.carrier4 {
+  width: 94px;
+  height: 94px;
+  background: url("carrier.png") no-repeat;
+  background-position: left 0px top -188px;
+}
+
+.carrier5 {
+  width: 94px;
+  height: 94px;
+  background: url("carrier.png") no-repeat;
+  background-position: left -94px top -188px;
+}
+
+.hor {
+  transform:rotate(-90deg);
+}
+
+.ver {
+  transform:rotate(0deg);
+}

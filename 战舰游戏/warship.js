@@ -14,14 +14,21 @@ var view = {
     var messagearea = document.getElementById('messagearea');
     messagearea.innerHTML = msg;
   },
+
   displayhit: function(location) {
     var cell = document.getElementById(location);
-    cell.setAttribute('class', 'hit');
+    cell.setAttribute('class','hit');
   },
+  
   displaymiss: function(location) {
     var cell = document.getElementById(location);
-    cell.setAttribute('class', 'miss');
-  }
+    cell.setAttribute('class','miss');
+  },
+
+  displayexplode: function(location) {
+    var cell = document.getElementById(location);
+    cell.setAttribute('class','explode')
+  },
 };
 
 var model = {
@@ -36,37 +43,48 @@ var model = {
   ],
 
   fire: function(guess) {
-    for (var i = 0; i < this.numShips; i++) {
+    for (var i = 0; i < this.shipLength; i++) {
       var ship = this.ships[i];
       var index = ship.locations.indexOf(guess);
       if (index >= 0) {
         ship.hits[index] = 'hit';
-        view.displayhit(guess);
         view.displaymessage('HIT!');
-      if (this.isSunk(ship)) {
-        view.displaymessage('You sank my battleship!');
-        this.shipsSunk++;
+        if (this.isSunk(ship)) {
+          view.displaymessage('You sank my battleship!');
+          this.shipsSunk++;
+          for(var i = 0;i < model.shipLength; i++){
+            document.getElementById(ship.locations[i]).onclick = function(){}
+          }
+        }
+        return true
       }
-      return true;
-      }
+      view.displaymiss(guess);
+      view.displaymessage('You missed.');
+      document.getElementById(event.target.id).onclick = function(){}
     }
-    view.displaymiss(guess);
-    view.displaymessage('You missed.');
     return false;
   },
-  
+
+
   isSunk: function(ship) {
     var count = 0;
     for (var i = 0; i < this.shipLength; i++) {
-      if (ship.hits[i] === 'hit' ) {
+      if (ship.hits[i] === 'hit') {
         count++
-        console.log(count)
+        for(var j = 0 ; j < this.shipLength ; j++){
+          view.displayhit(ship.locations[j]);
+          var target = document.getElementById(event.target.id)
+          target.style.backgroundImage = "url('zjsc/explode.png')"
+        }
+      }
+      if(Math.floor((count/this.shipLength) * 100) >= Math.floor((2/3) * 100)) {
+        for(var v = 0 ; v < this.numShips ; v++){
+          view.displayexplode(ship.locations[v])
+        }
+        return true;
       }
     }
-    if(Math.floor(count*100/this.shipLength)<67){
-      return false;
-    }
-    return true;
+    return false;
   },
 
   generateShipLocations: function() {
@@ -112,13 +130,12 @@ var model = {
     }
     return false;
   }
-};
+}
 
 function parseguess(guess) {
   if (guess === null || guess.length !== 2) {
     alert('Oops, please enter a letter and a number on the board.');
   } else {
-    firstchar = guess.charAt(0);
     var row = guess.charAt(0);
     var column = guess.charAt(1);
     if (isNaN(row) || isNaN(column)) {
@@ -140,8 +157,8 @@ var controller = {
       this.guesses++;
       var hit = model.fire(location);
       if (hit && model.shipsSunk === model.numShips) {
-        alert('You sank all my battleships, in ' + this.guesses + 'guesses');
         view.displaymessage('You sank all my battleships, in ' + this.guesses + 'guesses');
+        alert('You sank all my battleships, in ' + this.guesses + 'guesses')
       }
     }
   }
@@ -170,10 +187,24 @@ function binding(){
   var tdnodes = document.getElementsByTagName('td').length
   for(var i=0; i<tdnodes ; i++){
     firez[i].onclick = firem
+    firez[i].onmouseover = mv
+    firez[i].onmouseout = mt
   }
+
   function firem(){
     var guess = this.id
     controller.processguess(guess);
   }
 
+  function mv(){
+    document.body.style.cursor = "url('zjsc/mz.png')18 20,crosshair";
+    // var ta = document.getElementById(event.target.id)
+    // ta.style.backgroundImage = "url('zjsc/mz.png')"
+  }
+
+  function mt(){
+    document.body.style.cursor = "";
+    // var ta = document.getElementById(event.target.id)
+    // ta.style.backgroundImage = ''
+  }
 }
